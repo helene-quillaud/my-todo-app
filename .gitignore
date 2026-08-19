@@ -1,0 +1,47 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Base de données SQLite
+*.db
+*.sqlite3
+instance/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Variables d'environnement
+.env
+.env.*
+
+# ── Node.js ───────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# ── Système ───────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

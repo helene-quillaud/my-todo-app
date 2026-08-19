@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Mes tâches</h1>
+        <p class="subtitle">Restez organisé</p>
+      </header>
+
+      <form id="todo-form" class="todo-form">
+        <div class="input-group">
+          <input
+            type="text"
+            id="title-input"
+            placeholder="Nouvelle tâche..."
+            autocomplete="off"
+            required
+          />
+          <input
+            type="text"
+            id="description-input"
+            placeholder="Description (optionnelle)"
+            autocomplete="off"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+      </form>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="active">En cours</button>
+        <button class="filter-btn" data-filter="completed">Terminées</button>
+      </div>
+
+      <div id="error-banner" class="error-banner hidden"></div>
+
+      <ul id="todo-list" class="todo-list">
+        <li class="empty-state">Chargement...</li>
+      </ul>
+
+      <footer class="list-footer">
+        <span id="count"></span>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

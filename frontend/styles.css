@@ -1,0 +1,249 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  background: #f0f2f5;
+  color: #1f2328;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2328;
+}
+
+header .subtitle {
+  color: #57606a;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Form */
+.todo-form {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #1f2328;
+  background: #f7f8fa;
+  transition: border-color 0.15s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3b82d4;
+  background: #fff;
+}
+
+.input-group input::placeholder {
+  color: #9ca3af;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.btn:hover { opacity: 0.85; }
+.btn:active { opacity: 0.7; }
+
+.btn-primary {
+  background: #3b82d4;
+  color: #fff;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background 0.15s;
+  color: #57606a;
+}
+
+.btn-icon:hover { background: #f0f2f5; }
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  color: #57606a;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: #3b82d4;
+  color: #3b82d4;
+}
+
+.filter-btn.active {
+  background: #3b82d4;
+  border-color: #3b82d4;
+  color: #fff;
+}
+
+/* Error banner */
+.error-banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.hidden { display: none; }
+
+/* Todo list */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: opacity 0.2s;
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #3b82d4;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.todo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  color: #57606a;
+}
+
+.todo-description {
+  font-size: 0.82rem;
+  color: #57606a;
+  margin-top: 0.2rem;
+  word-break: break-word;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  color: #9ca3af;
+  padding: 2.5rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.list-footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .todo-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
